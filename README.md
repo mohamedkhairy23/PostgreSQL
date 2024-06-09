@@ -124,9 +124,9 @@
 
 ## Notes:
 
-- BEFIN for starting tranaction, and COMMIT for closing transaction.
-- ROLLBACK for undo transactions in progress.
-- To can make ROLLBACK, It's must to be in transaction.
+- BEFIN for starting the transaction, and COMMIT for closing the transaction.
+- ROLLBACK for undoing transactions in progress.
+- To make a ROLLBACK, must be in transaction.
 - Once you make a ROLLBACK, the transaction will close;
 - If you want to close a transaction without a ROLLBACK(undo) you must use COMMIT to close the transaction;
 
