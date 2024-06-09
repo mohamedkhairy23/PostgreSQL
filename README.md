@@ -18,11 +18,8 @@
 
 ## Help commands:
 
-- \copyright for distribution terms
 - \h for help with SQL commands
 - \? for help with PostgreSQL commands
-- \g or terminate with semicolon to execute query
-- \q to quit
 
 ## Connect to a new database:
 
@@ -36,7 +33,7 @@
 
 - \conninfo
 
-## Example for creating a table with table columns:
+## Example for creating a table with table columns in store database:
 
 - \c store
 - press enter
@@ -52,6 +49,17 @@
 - press enter
 - store(# created_at TIMESTAMP);
 - press enter
+
+## Other example for creating a table with table columns in store database:
+
+store=# CREATE TABLE products(
+store(# id SERIAL PRIMARY KEY,
+store(# name VARCHAR(50) NOT NULL,
+store(# description TEXT NOT NULL,
+store(# price NUMERIC(10, 2) NOT NULL,
+store(# qty INT NOT NULL,
+store(# created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+store(# updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
 
 ## For descriping databases:
 
@@ -81,8 +89,15 @@
 
 - SELECT full_name, email from customer;
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
+## Add New Column (Example):
 
-## Notes:-
+- ALTER TABLE customer ADD COLUMN updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 
-- TIMESTAMP data type is a static data type but, CURRENT_TIMESTAMP is a dynamic data type.
+## Drop Default Value:
+
+- ALTER TABLE customer ALTER COLUMN updated_at DROP DEFAULT;
+
+## To run sql file (Example):
+
+- \i file_path
+- \i C:/Users/ELBOSTAN/Desktop/PostgreSQL/productsData.sql
