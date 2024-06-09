@@ -110,11 +110,16 @@
 - \i file_path
 - \i C:/Users/KHAIRY/Desktop/PostgreSQL/productsData.sql
 
-## Delete table records with undo (Transaction):
+## Delete table records with doing undo (Transaction):
 
 - BEGIN;
 - DELETE FROM products;
 - ROLLBACK;
+
+## Delete table records without doing undo (Transaction):
+
+- BEGIN;
+- DELETE FROM products;
 - COMMIT;
 
 ## Notes:
@@ -122,6 +127,8 @@
 - BEFIN for starting tranaction, and COMMIT for closing transaction.
 - ROLLBACK for undo transactions in progress.
 - To can make ROLLBACK, It's must to be in transaction.
+- Once you make a ROLLBACK, the transaction will close;
+- If you want to close a transaction without a ROLLBACK(undo) you must use COMMIT to close the transaction;
 
 ## Delete table records without undo (TRUNCATE):
 
@@ -163,3 +170,23 @@
 
 - ASC (from small to large)
 - DESC (from large to small)
+
+## Delete A Row By ID:
+
+- DELETE FROM customer WHERE id = 4;
+
+## Delete a row by ID and returning the deleted record:
+
+- DELETE FROM products WHERE id = 145 RETURNING \*;
+
+## Delete a Specific Record By ID With Doing Undo Transaction:
+
+- BEGIN;
+- DELETE FROM products WHERE id = 146 RETURNING \*;
+- ROLLBACK;
+
+## Delete a Specific Record By ID Without Doing Undo Transaction:
+
+- BEGIN;
+- DELETE FROM products WHERE id = 146 RETURNING \*;
+- COMMIT;
