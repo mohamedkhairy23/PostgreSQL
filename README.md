@@ -109,7 +109,6 @@
 
 - \i file_path
 - \i C:/Users/KHAIRY/Desktop/PostgreSQL/productsData.sql
-- \i C:/Users/ELBOSTAN/Desktop/PostgreSQL/productsData.sql
 
 ## Delete table records with undo (Transaction):
 
@@ -125,3 +124,9 @@
 ## Delete table records without undo (TRUNCATE):
 
 - TRUNCATE TABLE products;
+
+## Select Rows With Condition:
+
+- SELECT id, name, price from products WHERE id >= 180;
+- SELECT id, name, price FROM products WHERE price BETWEEN 250 and 900;
+- SELECT id, name, price FROM products WHERE price = 731 OR price = 407;
