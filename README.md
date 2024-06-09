@@ -151,3 +151,15 @@
 ## Find Duplicated Rows (Rows that contain the same name, and the same price):
 
 - SELECT name, price, COUNT(\*) FROM products GROUP BY name, price HAVING COUNT(\*) > 1;
+
+## Order By Clause (Sorting):
+
+- SELECT id, name, price FROM products ORDER BY id ASC LIMIT 25;
+- SELECT id, name, price FROM products ORDER BY id DESC LIMIT 25;
+- SELECT id, name, price FROM products ORDER BY price DESC LIMIT 25;
+- SELECT id, name, price FROM products ORDER BY price DESC;
+
+## Notes:
+
+- ASC (from small to large)
+- DESC (from large to small)
