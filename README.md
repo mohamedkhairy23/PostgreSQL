@@ -130,3 +130,9 @@
 - SELECT id, name, price from products WHERE id >= 180;
 - SELECT id, name, price FROM products WHERE price BETWEEN 250 and 900;
 - SELECT id, name, price FROM products WHERE price = 731 OR price = 407;
+
+## Filteration operators:
+
+- SELECT id, name, price FROM products LIMIT 20;
+- SELECT id, name, price FROM products WHERE name LIKE '%Steel%';
+- SELECT id, name, price FROM products WHERE name LIKE '%Steel%' LIMIT 3;
