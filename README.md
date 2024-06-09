@@ -33,7 +33,7 @@
 
 - \conninfo
 
-## Example for creating a table with table columns in store database:
+## Example for creating a table with table columns in a store database:
 
 - \c store
 - press enter
@@ -50,7 +50,7 @@
 - store(# created_at TIMESTAMP);
 - press enter
 
-## Other example for creating a table with table columns in store database:
+## Another example for creating a table with table columns in the store database:
 
 - store=# CREATE TABLE products(
 - press enter
@@ -69,7 +69,7 @@
 - store(# updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
 - press enter
 
-## For descriping databases:
+## For describing a database:
 
 - \d
 
@@ -93,7 +93,7 @@
 
 ## Select Columns From Table:
 
-- SELECT \* FROM customer;
+- SELECT * FROM customer;
 
 - SELECT full_name, email from customer;
 
@@ -105,12 +105,12 @@
 
 - ALTER TABLE customer ALTER COLUMN updated_at DROP DEFAULT;
 
-## To run sql file (Example):
+## To run a SQL file (Example):
 
 - \i file_path
 - \i C:/Users/KHAIRY/Desktop/PostgreSQL/productsData.sql
 
-## Delete table records with doing undo (Transaction):
+## Delete the table records with doing undo (Transaction):
 
 - BEGIN;
 - DELETE FROM products;
@@ -153,11 +153,11 @@
 
 ## Find Duplicated Rows (Rows that contain the same name):
 
-- SELECT name, COUNT(\*) FROM products GROUP BY name HAVING COUNT(\*) > 1;
+- SELECT name, COUNT(*) FROM products GROUP BY name HAVING COUNT(*) > 1;
 
 ## Find Duplicated Rows (Rows that contain the same name, and the same price):
 
-- SELECT name, price, COUNT(\*) FROM products GROUP BY name, price HAVING COUNT(\*) > 1;
+- SELECT name, price, COUNT(*) FROM products GROUP BY name, price HAVING COUNT(*) > 1;
 
 ## Order By Clause (Sorting):
 
@@ -177,12 +177,12 @@
 
 ## Delete a row by ID and returning the deleted record:
 
-- DELETE FROM products WHERE id = 145 RETURNING \*;
+- DELETE FROM products WHERE id = 145 RETURNING *;
 
 ## Delete a Specific Record By ID With Doing Undo Transaction:
 
 - BEGIN;
-- DELETE FROM products WHERE id = 146 RETURNING \*;
+- DELETE FROM products WHERE id = 146 RETURNING *;
 - ROLLBACK;
 
 ## Delete a Specific Record By ID Without Doing Undo Transaction:
