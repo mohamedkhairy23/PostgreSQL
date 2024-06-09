@@ -100,4 +100,4 @@ store(# updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
 ## To run sql file (Example):
 
 - \i file_path
-- \i C:/Users/ELBOSTAN/Desktop/PostgreSQL/productsData.sql
+- \i C:/Users/KHAIRY/Desktop/PostgreSQL/productsData.sql
