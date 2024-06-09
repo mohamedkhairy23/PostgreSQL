@@ -153,11 +153,11 @@
 
 ## Find Duplicated Rows (Rows that contain the same name):
 
-- SELECT name, COUNT(*) FROM products GROUP BY name HAVING COUNT(*) > 1;
+- SELECT name, COUNT(star mark for all) FROM products GROUP BY name HAVING COUNT(star mark for all) > 1;
 
 ## Find Duplicated Rows (Rows that contain the same name, and the same price):
 
-- SELECT name, price, COUNT(*) FROM products GROUP BY name, price HAVING COUNT(*) > 1;
+- SELECT name, price, COUNT(star mark for all) FROM products GROUP BY name, price HAVING COUNT(star mark for all) > 1;
 
 ## Order By Clause (Sorting):
 
