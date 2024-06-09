@@ -52,14 +52,22 @@
 
 ## Other example for creating a table with table columns in store database:
 
-store=# CREATE TABLE products(
-store(# id SERIAL PRIMARY KEY,
-store(# name VARCHAR(50) NOT NULL,
-store(# description TEXT NOT NULL,
-store(# price NUMERIC(10, 2) NOT NULL,
-store(# qty INT NOT NULL,
-store(# created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-store(# updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+- store=# CREATE TABLE products(
+- press enter
+- store(# id SERIAL PRIMARY KEY,
+- press enter
+- store(# name VARCHAR(50) NOT NULL,
+- press enter
+- store(# description TEXT NOT NULL,
+- press enter
+- store(# price NUMERIC(10, 2) NOT NULL,
+- press enter
+- store(# qty INT NOT NULL,
+- press enter
+- store(# created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+- press enter
+- store(# updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+- press enter
 
 ## For descriping databases:
 
