@@ -109,3 +109,19 @@
 
 - \i file_path
 - \i C:/Users/KHAIRY/Desktop/PostgreSQL/productsData.sql
+- \i C:/Users/ELBOSTAN/Desktop/PostgreSQL/productsData.sql
+
+## Delete table records with undo (Transaction):
+
+<!-- BEFIN for starting tranaction, and COMMIT for closing transaction -->
+<!-- ROLLBACK for undo transactions in progress -->
+<!-- To can make ROLLBACK, It's must to be in transaction -->
+
+- BEGIN;
+- DELETE FROM products;
+- ROLLBACK;
+- COMMIT;
+
+## Delete table records without undo (TRUNCATE):
+
+- TRUNCATE TABLE products;
