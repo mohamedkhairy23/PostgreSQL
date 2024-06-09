@@ -190,3 +190,7 @@
 - BEGIN;
 - DELETE FROM products WHERE id = 146 RETURNING \*;
 - COMMIT;
+
+## Update a record(row) by ID:
+
+- UPDATE customer SET email = 'test@gmail.com' WHERE id = 1;
