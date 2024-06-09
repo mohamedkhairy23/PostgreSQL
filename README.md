@@ -39,7 +39,7 @@
 - press enter
 - store=# CREATE TABLE IF NOT EXISTS customer(
 - press enter
-- store(# id SERIAL PRIMARY KEY NOT NULL,
+- store(# id SERIAL PRIMARY KEY,
 - press enter
 - store(# full_name VARCHAR(50) NOT NULL,
 - press enter
