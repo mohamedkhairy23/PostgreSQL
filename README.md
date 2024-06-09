@@ -112,14 +112,16 @@
 
 ## Delete table records with undo (Transaction):
 
-<!-- BEFIN for starting tranaction, and COMMIT for closing transaction -->
-<!-- ROLLBACK for undo transactions in progress -->
-<!-- To can make ROLLBACK, It's must to be in transaction -->
-
 - BEGIN;
 - DELETE FROM products;
 - ROLLBACK;
 - COMMIT;
+
+## Notes:
+
+- BEFIN for starting tranaction, and COMMIT for closing transaction.
+- ROLLBACK for undo transactions in progress.
+- To can make ROLLBACK, It's must to be in transaction.
 
 ## Delete table records without undo (TRUNCATE):
 
@@ -136,3 +138,16 @@
 - SELECT id, name, price FROM products LIMIT 20;
 - SELECT id, name, price FROM products WHERE name LIKE '%Steel%';
 - SELECT id, name, price FROM products WHERE name LIKE '%Steel%' LIMIT 3;
+
+## Duplicate A Specific Row In A Table:
+
+- INSERT INTO products (name, description, price, qty) SELECT name, description, price, qty FROM products WHERE id = 175;
+- SELECT id, name, price FROM products WHERE name LIKE 'Gorgeous Bronze Cheese';
+
+## Find Duplicated Rows (Rows that contain the same name):
+
+- SELECT name, COUNT(\*) FROM products GROUP BY name HAVING COUNT(\*) > 1;
+
+## Find Duplicated Rows (Rows that contain the same name, and the same price):
+
+- SELECT name, price, COUNT(\*) FROM products GROUP BY name, price HAVING COUNT(\*) > 1;
