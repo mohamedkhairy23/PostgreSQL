@@ -26,3 +26,13 @@
 
 ## Displaying database connection info:
 - \conninfo
+
+## Example for creating a table with table columns:
+- CREATE TABLE table-name(
+- Then press enter.
+- store(# id int,
+- Then press enter.
+- store(# name VARCHAR(50),
+- Then press enter.
+- store(# price int );
+- Then press enter.
